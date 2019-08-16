@@ -1,0 +1,87 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{polski}
+\usepackage{amssymb}
+\usepackage[english,polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{empheq}
+\usepackage{xcolor}
+\usepackage[pdftex,
+            pdfauthor={Bartosz Sójka},
+            pdftitle={Praca licencjacka},
+            pdfsubject={Równoważność przez cięcia w przestrzeni dwuwymiarowej}]{hyperref}
+
+%\setlength\parindent{0pt}
+
+\newtheorem{observation}{Observation}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Twierdzenie}
+\newtheorem{lemma}{Lemat}
+
+\newcommand{\todo}[1]{\hfill \break \textbf{\Huge \textcolor{violet}{TO DO: #1} \hfill \break}\normalsize}
+\newcommand{\smalltodo}[1]{\textbf{\ \textcolor{violet}{To do}}}
+\newcommand{\onedotsn}[1]{{#1}_1, \dots, {#1}_n}
+\newcommand{\ndotsm}[3]{{#1}_{#2}, \dots, {#1}_{#3}}
+
+
+\begin{document}
+The paper will be rwritten in the ascending level of difficulty from to abstract
+nonsense.
+The motivatiopn was the question how to
+Netherthe less is completly not rigurous
+Punktem wyjścia była próba.
+
+
+
+\begin{abstract}
+W roku bla bla Bla Bla udowodnił że bla bla. Motywacją był prosty dowód ,że jest to niemożliwe dla cięć
+kawałkami $C^2$. Praca będzie napisała z rosnącą trudnością.
+\end{abstract}
+\section{}
+\content{\textit{rysunki okręgu i kwadratu}}
+Mając do pocięcia okrąg i kwadrat spodziewamy się, że to sie nie uda, jako że nie ma w co wpasować
+obłości jakie ma okrąg, pjawia się pytanie, czy nie da sie tak jakoś sprytnie powycinać, żeby te obłości
+zniwelować. Kiedy sie nad tym zastanowimy, możemy spodziewać sie, że nie, pownieważ próba wycięcia wklęsłośi
+w którą wpasuje się wypukłość tworzy kolejną wypukłość \\
+\content{\textit{rysunek}} \\
+Nie mniej jednak nie jest to precyzyjny argument i nie jesteśmy pewni, czy na pewno nie da isę tak powycinać
+części z koła, zeby nie złożyć kwadratu.
+Dlatego powiemy teraz tamten pomysł precyzyjniej. \\
+\content{\textit{ewentualny rozdział o krzywiźnie (dlaczego ona, itp.) }} \\
+Zauważmy, że całka z krzywizny nie zmienia się przy cięciach, sklejeniach i przesunięciach.
+OK
+Koło ma $\displaystyle\int_{\partial} \kappa = 2 \pi$, a kwadrat ma $\displaystyle\int  _{\partial} \kappa
+= 0$. \\
+Nie rozwiązuje to kwestii do końca, jako, że nie odpowiada na pytanie czy da się podzielić pierścień:
+\content{\textit{rysunek pierścienia}}
+w kwadrat. Całka w obu przypadkach to zero. Widzimy jednak, że w przypadku pierścienia ujemna wartość
+wniesiona jest przez większą krzywiznę na mniejszej długości zaaś dotatnia przez mniejszą krzywizn na
+wiekszej długości. Intuicja podpowiada, że pierscienia równiż nie da sie rozciąć, bo nie każdy punkt ma
+jednakowe odpowiadające mu otoczenie. Zeby to uwzględnić wprowadzamy znakowaną miarę obłości.
+\content{\textit{rozdział o znakowanej mierze obłości}}
+bla bla
+\section{poszukiwanie odwrotnego warunku}
+\section{tu napiszę dowód, że wystarczy przenieść brzeg z zachowaniem skierowania}
+
+Załóżmy, że dwie figury mają tę własność, że mogę pociąć brzeg jednej z nich tak, że można go przełożyć na
+brzeg drugiej oraz nie mają szpiców. Pokażemy, że wtedy da się tak pociąć całą figurę. \\
+1. Niech $\alpha$ to najmniejszy kąt jaki tworzą wektory styczne do końców krzywych po sklejeniu.
+2. Wybierzmy $\varepsilon$ tak, by w każdej kuli o promieniu $\varepsilon$ przeciwobraz $\gamma^-{1}\gamma
+\cup B$ był spójny oraz by $\gamma^{''}$ było stałego znaku po obu stronach punktu. Oraz by linia
+poprowadzona z punktu rozcięcia pod kątem $\alpha/2$ przecinała jako prierwsze linię pasu złożoną z kul a
+nie krzywą (czy tak się da?) (da się trzeba zobaczyć jak daleko krzywa oddala się od linii i zmiejszyć
+$\varepsilon$ poniżej tego). wtedy części obraniczone tymi pasami i liniami po podzieleniu odpowiednio
+drobno dają się przenieść nie tracąć pola powierzchi. I sprowadza sie to do problemu podziału wielokątów.
+
+\content{jak mają równe pola i da sie przenieść brzegi, to da się całe figury}
+SUper! \\
+\content{jeśli jest jakiś niezmiennik, który nie rozróżnia dwóch krzywych gładkich, to nie rozróżni dla
+obszarów}
+więc jeśli dla jakiegoś niezmiennika zobaczymy że zawodzi on na krzywych gładkich, to zawodzi on na
+figurach \\
+
+\section{podejście drugie}
+
+\end{document}
