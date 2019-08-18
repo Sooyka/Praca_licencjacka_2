@@ -16,16 +16,19 @@
 
 %\setlength\parindent{0pt}
 
-\newtheorem{observation}{Observation}
-\newtheorem{definition}{Definition}
-\newtheorem{theorem}{Twierdzenie}
-\newtheorem{lemma}{Lemat}
+\newtheorem{observation}{Observation}[subsection]
+\newtheorem{definition}[observation]{Definition}
+\newtheorem{theorem}[observation]{Theorem}
+\newtheorem{lemma}[observation]{Lemma}
 
 \newcommand{\todo}[1]{\hfill \break \textbf{\Huge \textcolor{violet}{TO DO: #1} \hfill \break}\normalsize}
 \newcommand{\content}[1]{\hfill \break \textbf{\large \textcolor{violet}{#1} \hfill \break}\normalsize}
 \newcommand{\smalltodo}[1]{\textbf{\ \textcolor{violet}{To do}}}
 \newcommand{\onedotsn}[1]{{#1}_1, \dots, {#1}_n}
 \newcommand{\ndotsm}[3]{{#1}_{#2}, \dots, {#1}_{#3}}
+\newcommand{\rysunek}[1]{\hfill \break\\[16pt] \Huge \textbf{\textcolor{violet}{Brakujący rysunek \normalsize
+#1}} \hfill
+\break \\[16pt] \normalsize}
 
 \title{Równoważność przez cięcia w przestrzeni dwuwymiarowej}
 \author{Bartosz Sójka}
@@ -87,9 +90,7 @@ będzie miała odcinki jako krawędzie, które zostaną odwzorowane na brzeg kwa
 tak wyciąćtych części, by "upchnąć" gdzieś również obłość okręgu. Przeciwko takiej możliwości świadczy
 następujące rozumawanie. \\
 Kiedy tnę figurę krzywą tak, żeby wprowadzić wklesłość, pojawia mi się również komplementarna do niej obłość.
-\\
-rysunek
-\\
+\rysunek{}
 Można spodziewać się więc, że próbując wyprodukować dla okręgu nadmiarową wklęsłość, starania te zawiodą,
 gdyż za każdym razem powstanie tyle samo obłości. Tylko co to w tym wypadku znaczy "tyle samo"?
 Nie wiedząc tego dalej pozostaje pewna wątpliwość, czy nie da się pociąć tak, by obłość zniknęła. widać, że
@@ -105,10 +106,10 @@ Niech dowolnego odcinka jego obłość wynosi zero. Niech dla dowolnego okręgu 
 Niech dla spójnego fragmentu okregu jego obłość do obłości całego okręgu ma się tak jak jego długość do
 długości całego okregu. Dzięki temu dla rodziny krzywych o tej samej długości $l$ - odcinka i fragmentów
 okręgów wszystkich możliwych promieni ($[l/2\pi, \infty)$ faktycznie obłość jest tym większa im bardziej
-zakrzywiona jest krzywa. \\
-rysunek \\
-Zdefiniujmy teraz obłość dla krzywych $C^2$. \\
-rysunek - podział krzywej, okręgi \\
+zakrzywiona jest krzywa.
+\rysunek{}
+Zdefiniujmy teraz obłość dla krzywych $C^2$.
+\rysunek{ - podział krzywej, okręgi }
 Definiujemy ją jako granicę przybliżeń obłości. \\
 Przybliżamy obłość dzieląc krzywą na fragmenty i opisując okręgi tak jak na rysunku. Przybliżona obłość
 fragmentu, to obłość odpowiadającego fragmentu okręgu. \\
@@ -124,16 +125,88 @@ brzegów fragmentów, które są identyczne z wnętrzmi po przeciwnych stronach.
 Zatem całki ze znakowanej krzywizny (obłość) po nich są identyczne co do wartości i przeciwne co do znaku.
 Zatem ich suma wynosi zero. \\
 Stąd po poccięciu figura ma identyczną obłość, co przed. \\
-Przesuwanie fragmentów i obracanie oczywiście nie zmienia obłości. Równiż klejenie fragmentóœ ze sobą nie
+Przesuwanie fragmentów i obracanie oczywiście nie zmienia obłości. Również klejenie fragmentóœ ze sobą nie
 może jej zmienić, gdyż klejone fragmenty muszą być przystające i mieć wnętrze po przeciwnch stronach. Suma
 ich obłości musi wynosić zatem zero. \\
-
+Stąd operacja pocięcia na skończenie wiele fragmentów krzywymi i ponownego sklejenia nie zmienia obłości.
+Koło ma jednak obłość rózną $2\pi$, a kwadrat równą $0$, zatem pocięcie w ten sposób jednego i sklejenie
+drugiego jest niemożliwe.
 
 \section{Pierścień i kwadrat}
+Powyższe rozumowanie rozwiązuje problem dla koła i kwadratu, nie jest pomocne jednak w innym naturalnym
+przykładzie, stworzonym wręcz po to (to prawda), żeby wykazać jego ograniczenia. \\
+Weżmy pierścień i kwadrat.
+\rysunek{}
+Intuicja, tak jak poprzednio, podpowiada nam, że nie powinno się dać jednego przekształcić na drugie
+przy pomocy cięć i klejeń. Jednak obłość obydwu wynosi $0$.
+Pierścień ma i wypukłości i wklęsłości, ale nie pasują one do siebie, więc spodziewamy się, że się nawzajem
+nie "zniosą", jednak niezmiennik jakim jest obłość tego nie widzi. \\
+Wyruszymy teraz na poszukiwania subtelniejszego niezmiennika, który wychwyci różnicę. Bedzie to
+znakowana miara obłości. Ponownie zdefiniujemy ją dla krzywych z wyróżnioną stroną, a następnie
+dla figur jako dziedziczoną z ich brzegu. \\
+Jak widać problem leży w tym, że obłość wynosi zero, ale dodatnie i ujemne przyczynki pochadzą od okręgów
+o różnych promieniach, które i tak do siebie nie pasują. Dlatego w dokładniejszym podejściu, rozróżniamy
+od fragmentów krzywej o jakim proieniu pochodzi obłość. W tym celu definiujemy miarę, na przedziale
+$\mathbb{R}$, równym $[0, K_\text{MAX}]$, gdzie $K_\text{MAX}$ jest maksymalną krzywizną występującą na
+krzywej. Określamy ją jak następuje:
+\begin{equation}
+    \mu_O([k_1, k_2]) = \displaystyle\int\limits_{\{t\ :\ k(t) \in [k_1, k_2]\}}
+    k\ \textrm{d}t.
+\end{equation}
+Tak zdefiniowana miara znowu jest niezmiennicza na cięcia (krzywe są identyczne, różnią się wyłącznie co do
+strony wnętrza) jak i na izometrie i sklejenia. \\
+Miara ta ma w każdym punkcie albo gęstość (gdy jakiś promień nie ma żadnego łuku), lub masę, gdy dany promień
+ ma swój łuk. \\
+ W przypadku pierścienia ZMO wynosi tyle:
+ \rysunek{}
+ W przypadku kwadratu wszędzie wynosi zero. \\
+ Zatem faktycznie nie da się rozciać pierścienia i złożyć z niego kwadratu. \\
 
+ Znakowana miara obłości pokrywa wszystkie naturalne przykłady (tzn. takie, które wymyśliłem, zanim starałem
+ się wymysleć takie, które ją obalą). W szczególności potrafi nie tylko rozróżnić, ale i sklasyfikować
+ wszystkie figury o brzegach składających się z odcinków i łuków (co pokażemy w następnym rozdziale). \\
+ I tutaj zbliżamy się do prolemu - idealny niezmiennik pozwalałby nie tylko na określenie czy dla danych
+ dwóch figur nie da się ich przerzucić. Wynikało by też z niego, że jeśli jest równy dla obu figur, to
+ przerzucić się je da. Przy definiowaniu niezmienników jako własności brzegu wymaga to jednak chociażby
+ faktu, że jeśli brzegi są sobie (w pewnym sensie jaki ściśle za niedługo podamy) równoważne przez cięcia,
+ to figury także. Na szczęście okaże się, że tak jest. \\
+ W kolejnych rozdziałach zajmiemy się własnie szukaniem takiego twierdzenia odwrotnego (czy właściwie
+ działającego w obie strony) i związanego z nim niezmiennika. Zakończy się to dyskusją, czy wyniki nas
+ satysfakcjonują. \\
+ Pokażemy też w międzyczasie, że znakowana miara obłości takim niezmiennikiem nie jest (chociaż jest nim
+ dla figur o brzegach składających się z odcinków i łuków).
+ % Ale najpierw sformalizujmy nieco nasze pojęcia.
 \section{Twierdzenie odwrotne}
+Najpierw sformalizujmy nieco nasze pojęcia. \\
+Zajmujemy się figurami w $\mathbb{R}^2$, których brzegi są skończonymi zbiorami rozłącznych
+krzywych
+zamkniętych, kawałkami $C^\infty$, takimi, że, żadne dwa sąsiednie $C^\infty$ kawałki jednej krzywej nie
+tworzą ze sobą kąta $0 stopni$. Co to znaczy, że nie tworzą kąta $0 stopni$? O to:
+\rysunek{}
+i wyjaśnienie \\
 
+Wszędzie dalej kiedy będzie użyte słowo figura, będzie to oznaczało właśnie taki podzbiór $\mathbb{R}^2$. \\
+
+\subsubsection{Krzywa z wyróżnioną stroną}
+Krzywa z wyróżnioną stroną będzie to krzywa wraz z wybraną jedną z dwóch klas ciągłych cięć pewnej wybranej
+ podwiązki wiązki stycznej $\mathbb{R}^2$ zawieszonej nad tą krzywą. \\
+Dla krzywej $\gamma : [a, b] \to \mathbb{R}^2$ patrzymy się na podwiązkę wiązki stycznej do
+$\mathbb{R}^2$ złożoną
+z dowolnych podprzestrzeni dopełniczych do podprzestrzeni rozpinanych przez wektor styczny do krzywej w
+danym punkcie. (na rogach wybieramy tak, by przestrzeń była dopełnicza dla obu wektorów stycznych). \\
+Wybieramy teraz nieznikające cięcia tych wiązek, takich, aby w punktach nieróżniczkowalności
+wyznacznik macierzy złożonej z wybranego wektora i z wektora stycznego miał taki sam znak dla obydwu
+wektorów stycznych.
+\rysunek{}
+Dzielą się one na dwie klasy: \\
+-cięcia, gdzie w każdym punkcie wyznacznik macierzy [wektor styczny, wektor z cięcia] jest dodatni oraz\\
+-cięcia, gdzie w każdym punkcie wyznacznik macierzy [wektor styczny, wektor z cięcia] jest ujemny \\
+Jest tak, ponieważ cięcia te są ciągłymi cięciami jednowymiarowej wiązki, wyznacznik jest ciągły oraz
+zależność
 \subsection{Równoważność z problemem na brzegach}
+Najpierw dowiedziemy, że zagadnienie równoważności takich figur przez cięcia jest równoważne równoważności
+przez cięcia ich brzegów w następujacym sensie: \\
+Powiemy, że dwie krzywe z wyróżnioną
 
 \subsection{Kiedy ZMO zawodzi}
 
