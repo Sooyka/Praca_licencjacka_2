@@ -24,6 +24,7 @@
 \newcommand{\todo}[1]{\hfill \break \textbf{\Huge \textcolor{violet}{TO DO: #1} \hfill \break}\normalsize}
 \newcommand{\content}[1]{\hfill \break \textbf{\large \textcolor{violet}{#1} \hfill \break}\normalsize}
 \newcommand{\smalltodo}[1]{\textbf{\ \textcolor{violet}{To do}}}
+\newcommand{\smalltodoII}[1]{\hfill \break \textbf{\ \textcolor{violet}{To do: #1}}\hfill \break}
 \newcommand{\onedotsn}[1]{{#1}_1, \dots, {#1}_n}
 \newcommand{\ndotsm}[3]{{#1}_{#2}, \dots, {#1}_{#3}}
 \newcommand{\rysunek}[1]{\hfill \break\\[16pt] \Huge \textbf{\textcolor{violet}{Brakujący rysunek \normalsize
@@ -132,7 +133,7 @@ Stąd operacja pocięcia na skończenie wiele fragmentów krzywymi i ponownego s
 Koło ma jednak obłość rózną $2\pi$, a kwadrat równą $0$, zatem pocięcie w ten sposób jednego i sklejenie
 drugiego jest niemożliwe.
 
-\section{Pierścień i kwadrat}
+\section{Pierścień i kwadrat}\label{ZMO}
 Powyższe rozumowanie rozwiązuje problem dla koła i kwadratu, nie jest pomocne jednak w innym naturalnym
 przykładzie, stworzonym wręcz po to (to prawda), żeby wykazać jego ograniczenia. \\
 Weżmy pierścień i kwadrat.
@@ -178,10 +179,10 @@ Miara ta ma w każdym punkcie albo gęstość (gdy jakiś promień nie ma żadne
  % Ale najpierw sformalizujmy nieco nasze pojęcia.
 \section{Twierdzenie odwrotne}
 Najpierw sformalizujmy nieco nasze pojęcia. \\
-Zajmujemy się figurami w $\mathbb{R}^2$, których brzegi są skończonymi zbiorami rozłącznych
-krzywych
-zamkniętych, kawałkami $C^\infty$, takimi, że, żadne dwa sąsiednie $C^\infty$ kawałki jednej krzywej nie
-tworzą ze sobą kąta $0 stopni$. Co to znaczy, że nie tworzą kąta $0 stopni$? O to:
+Zajmujemy się figurami w $\mathbb{R}^2$, których brzegi są skończonymi zbiorami rozłącznych obrazów
+prostych krzywych
+zamkniętych, kawałkami $C^\infty$, takimi, że, żadne dwa sąsiednie $C^\infty$ kawałki obrazów jednej krzywej
+nie tworzą ze sobą kąta $180 stopni$. Co to znaczy, że nie tworzą kąta $180 stopni$? O to:
 \rysunek{}
 i wyjaśnienie \\
 
@@ -198,17 +199,141 @@ Wybieramy teraz nieznikające cięcia tych wiązek, takich, aby w punktach nier�
 wyznacznik macierzy złożonej z wybranego wektora i z wektora stycznego miał taki sam znak dla obydwu
 wektorów stycznych.
 \rysunek{}
+\smalltodoII{Może ująć to w lemat:}
 Dzielą się one na dwie klasy: \\
 -cięcia, gdzie w każdym punkcie wyznacznik macierzy [wektor styczny, wektor z cięcia] jest dodatni oraz\\
 -cięcia, gdzie w każdym punkcie wyznacznik macierzy [wektor styczny, wektor z cięcia] jest ujemny \\
 Jest tak, ponieważ cięcia te są ciągłymi cięciami jednowymiarowej wiązki, wyznacznik jest ciągły oraz
-zależność
+zależność wektora stycznego od parametru jest ciągła poza punktami nieróżniczkowalności, ale na nich,
+z wyboru wiązek, wyznacznik nie zmiania znaku. Stąd wyznacznik musiałby zmieniać znak we wnętrzu
+różniczkowalnej krzywej, ale wtedy w pewnym momencie zerowałby się, co oznaczałoby, że cięcie znika.
+Sprzeczność. \\
+Wybór jednej z klas takich cięć nazywamy wyborem strony krzywej. Ma to oddawać fakt czegoś takiego: \\
+\rysunek{}
+Zauważmy, że dla figury rozpatrywanej jako dwuwymiarowa rozmaitość oraz komponenty jej brzegu jedna z tych
+klas jest złożona z wektorów leżacych w wiązce stycznej do tej rozmaitości, a jedna z wektorów do niej
+nienależących. Ponieważ dla każdej komponenty parametryzację możemy wybrać niezależnie, więc da się je wybrać
+tak, by jedna z tych klas odpowiadała dla wszsystkich komponent wnętrzu rozmaitości. Od tej pory będziemy
+zakładali taki właśnie wybór parametryzacji. Co więcej taki, by strona z ujemnym wyznaczniekiem była we
+wnętrzu. (Czyli obiegamy figury przeciwnie do ruchu wskazówek zegra). \\
+
+Od tej pory o wszystkich krzywych zakładamy, że mają wyróżnioną stronę.
 \subsection{Równoważność z problemem na brzegach}
 Najpierw dowiedziemy, że zagadnienie równoważności takich figur przez cięcia jest równoważne równoważności
 przez cięcia ich brzegów w następujacym sensie: \\
-Powiemy, że dwie krzywe z wyróżnioną
+Powiemy, że dwie krzywe są równoważne przez cięcia, jeżeli obraz jednej z nich można pociąć i za pomocą
+izometrii przekształcić na obraz drugiej (zachowując wyróżnioną stronę), przy czym dopuszczamy cięcia pustej
+przestrzeni na dwie
+odpowiadające sobie krzywe oraz sklejanie takich krzywych:
+\rysunek{słynne rysunki rozcinania pustej przestrzeni oraz klejenia dwóch odpowiadających krzywych
+dopiski - kreacja, anihilacja}
+W jedną stronę: \\
+jeśli da się przerzucić brzegi na siebie, a figury mają równe pola, to da się również figury. \\
+Weźmy dwie figury $A$ oraz $B$ o równych polach, takie, że brzegi są równoważne przez cięcia. Niech cięcie
+to będzie realizowane poprzez podział brzegu $A$ i przekształcenie jego fragmentów przez izometrie oraz,
+jeśli konieczny, podział "pustej przestrzeni" na krzywe i anihilację pasujących krzywych tak jak opisane
+wyżej. Niech ta operacja świadcząca o równoważności dwóch brzegóœ przez cięcia nazywa się $\phi$ \\
+Skonstruujemy teraz redukcję problemu podziału tych figur do problemu podziału wielokątów, który, jak wiadomo
+ z Wallace–Bolyai–Gerwien theorem, zawsze ma rozwiązanie. \\
+Rozpatrzmy fragmenty na które podzielony jest brzeg $A$. Każdy z nich jest zbiorem zwartym, więc
+(za wyjątkiem sąsiadujących) jest on w niezerowej odległości od pozostałych fragmentów. Dla tych, których
+ obraz przez $\phi$ jest w $B$ (to znaczy, że fragment nie został zanihilowany z mu odpowiadającym)
+ jest on również w niezerowej odległości od wszystkich fragmentów (za wyjątkiem tych z którymi ma wspólne
+ końce) z których został ułożony brzg $B$ przy  użyciu $\phi$.  \\
+Fragmentów jest skończenie wiele, niech więc $\varepsilon$ będzie dodatanią liczbą rzeczywistą mniejszą
+od wszystkich tych odległości dla wszystkich par niesąsiadujących fragmentów. \\
+rozpatrzmy $\frac{\varepsilon}{4}$-owe otoczki wszystkich fragmentów krzywej. W każdym z tych fragmentów
+prowadzimy
+łamaną prostą o początku i końcu w końcach fragmentu taką, że piersza i ostatnia krawędź łamanej
+\label{180 stopni} spełnia
+następujący warunek na kąty względem wektorów stycznych (zarówno w $A$, jak i w $B$:
+\rysunek{początek i koniec łamanej, dwusieczna kąta  z wektorów stycznych}
+% \rysunek{przypadek 180 stopni}
+Wtedy wszystkie obszary ograniczone przez fragmenty krzywej oraz łamane w odpowiadających im
+otoczkach oraz ich obrazy prze $\phi$ są parami rozłączne za wyjątkiem końców fragmentów dla
+sąsiadujących fragmentów. \\
+Możemy odciąć je z $A$ i przerzucić w odpowiednie miejsca na $B$. \\
+Fragmenty brzegu $A$, które się z sobą zanihilują, odcinamy po jednym z pary wraz z jego łamaną i
+anihilujemy.
+\rysunek{anihilecja}
+Niech $A'$ oznacza tak powstałą z $A$ figurę.
+Brzeg $B$ dzieli się na dwa obszary - fragmenty pochodzące z fragmentów brzegu $A$ oraz fragmenty
+pochodzące z rozcięć przestrzeni.
+Pozostaje "obsłużyć" fragmety brzegu $B$ pochadzące z kreacji krzywych z przestrzeni. \\
+Potrzebny będzie następujący lemat:
+\begin{lemma}\label{lemat o dzieleniu}
+    Dla dowolnej krzywej $\gamma : [a, b] \to \mathbb{R}$ takiej jak tu przyjmujemy i dowolnego okręgu
+    $\mathcal{O}$ zawartego w $\mathbb{R}^2$ da się znaleźć taki podział $\gamma$, by poprzez izometrie
+    dało się go odwzorować we wnętrze $\mathcal{O}$ tak, że obrazy fragmentów są parami rozłączne.
+\end{lemma}
+\begin{proof}
+    % Obłość $\gamma$ jest skończona, zatem skończona jest obłość każdego fragmentu $\gamma$.
+    Konstuujemy ciąg podziałów $\gamma$
+     tak, by dla każdego $n$ w $n$-tym podziale
+     % obłość kazdego fragmentu była mniejsza niż $\pi/2^n$ oraz by
+     długość każdego fragmentu była mniejsza niż $d(\mathcal{O})/(2n+1)$ ale (poza, być może, ostatnim)
+      większa niż $d(\mathcal{O})/(2n+3)$. \\
+      \smalltodoII{dać lepsze oznaczenia}
+     Fragmentów tych będzie co najwyżej część całkowita z $\frac{d(\gamma)}{d(\mathcal{O})/(2n+3)}$.
+     czyli $(2n+3)\frac{d(\gamma)}{d(\mathcal{O})}$. Każdy z tych fragmentów zmieści się w kole
+     o średnicy $d(\mathcal{O})/(2n+1)$. Kół o średnicach $d(\mathcal{O})/(2n+1)$ w kole $\mathcal{O}$ da się
+      na pewno zmieścić co najmniej $6\frac{n(n+1)}{2}+1$. \\
+      \rysunek{sześciokąty}
+      Dla $n$ takiego że $3\frac{n(n+1)+1}{2n+3}>\frac{d(\gamma)}{d(\mathcal{O})}$, krzywa zmieści się
+      rozłącznie w okręgu dla podziału odpowiadającego $n$.
+     % \begin{lemma}
+     %     Dla każdego takiego podziału krzywa zmieści się w kole o promieniu $a$.
+     % \end{lemma}
+     % \begin{proof}
+     %
+     % \end{proof}
+\end{proof}
+
+Bierzemy wszystkie krzywe (bez wyróżnionej strony) z których powstały te fragmenty brzegu $B$, łączymy je
+w jedną długą krzywą prostą (jeśli trzeba to łamiemy je, żeby zachować warunek "prostości").
+Tak skonstruowaną krzywą umieszczamy w kole tak małym, by było zawarte we wnętrzu $A'$ tak jak mówi lemat
+\ref{lemat o dzieleniu}. Przy czym zagęszczamy podział tak mocno by obłość każdego fragmentu nie
+przekraczała $\pi/8$ oraz by dlugość żadnego fragmentu nie była większa niż $\varepsilon/8$.
+Należy teraz wykonać następujące cięcia w $A'$:
+\rysunek{jak ciąć}
+\rysunek{jak ciąć w środku kulki}
+Z powyższych fragmentów układamy odpowiednie fragmenty brzegu $B$. \\
+Tak powstała figura $A''$ jest wielokątem. Niepokryta część $B$ rówież jest wielokątem,
+nazwijmy ją $B''$. $A$ oraz $B$ miały równe pola, więc $A''$ i $B''$ również mają równe pola.
+Są więc równoważne przez cięcia, więc $A$ i $B$ również są. \\[8pt]
+
+W drugą stronę: \\
+Jeśli figury są równoważne, to brzegi też. \\
+Podział figur zadaje równoważność brzegu jednej z sumą brzegów fragmentów na jakie została pocięta
+oraz równoważność tej sumy brzegów z brzeiem drugiej. Stąd dla równoważnych figur ich brzegi również są
+równoważne.
+$_\square$ \\
+\textbf{Uwaga.} To właśnie w tym dowodzie potrzebne jest założenie, że fragmety krzywych nie mogą tworzyć
+kątu 180 stopni. Konkretnie w \hyperref[180 stopni]{tym}. W przypadku 180 stopni nie dałoby się skonstruować
+odpowiednich łamanych. \\
+Przykładem figury której brzeg jest równoważny przez cięcia z brzegiem innej, o równym polu, a które nie
+spełniają jedynie tego założenia i nie są równoważne przez cięcia są następujące figury: \\
+\rysunek{posklejane kółka ze szpicami}.
+\text{Dowód nierównoważności:} \\
+\todo{jakiś niezmiennik na szpice, to powinno wyjść}
 
 \subsection{Kiedy ZMO zawodzi}
+Pokazaliśmy, że rozstrzygając równoważność przez podział figur o tym samym polu wystarczy roztrzygnąć
+równoważność przez podział ich brzegów. Zastanówmy się, czy znakowana miara obłości jest wystarczającym
+kryterium do klasyfikacji krzywych - tzn. czy dowolne dwie nierównoważne mają różną oraz czy dowolne
+dwie równoważne mają taką samą. \\
+W \ref{ZMO} odpowiedzieliśmy sobie twierdząco na drugie pytanie.
+% Pokażemy teraz, że odpowiedź na pierwsze
+% pytanie jest twierdząca dla krzywych złożonych wyłącznie z łuków i odcinków.
+Odpowiedź na pierwsze pytanie jest twierdząca dla krzywych złożonych wyłącznie z łuków i odcinków.
+Mając tą samą znakowaną miarę obłości mają tą samą sumaryczną długość łuków okręgów o odpowiednich
+promieniach z wyróżnioną stroną z odpowiedniej strony. Fragmenty te można kleić ze sobą i ciąć, tak by
+z jednej krzywej otrzymać drugą. Fragmenty o krzywiźnie 0 można dowolnie kreować i anihilować. \\
+Znakowana miara obłości nie potrafi jednak rozróżnić wszystkich nieprzystających do siebie przez cięcia
+krzywych. Skonstruujemy tego przykład. Najpierw jednak przeprowadzimy analizę czym jest
+wprowadzona tutaj znakowana miara obłości i jak ma się do krzywizny krzywej.
+\subsubsection{Jak wygląda znakowana miara obłości}
+
 
 \section{Wielka grupa abelowa}
 
