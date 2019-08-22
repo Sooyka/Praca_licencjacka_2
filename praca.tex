@@ -48,7 +48,7 @@ Instytut Matematyczny}\\
 {\Large Równoważność przez cięcia w przestrzeni dwuwymiarowej}}\\
 \end{center}
 \vspace{3cm}
-{\large \hspace*{6.5cm}Praca magisterska\\
+{\large \hspace*{6.5cm}Praca mam nadzieję magisterska\\
 \hspace*{6.5cm}napisana pod kierunkiem\\
 \hspace*{6.5cm}prof. dr. hab. Jana Dymary }\\
 \vfill
@@ -75,10 +75,10 @@ Instytut Matematyczny}\\
 
  \section{Koło i kwadrat}
 Praca będzie miała stopniowo rosnący poziom formalności. Początek jest gawędą o moich rozmyślaniach i
-motywacjach skąd wzięły się przedstawione problemy. Mniej więcej między  drugim a trzecim rozdziałem
-całość nabiera formalizmu. Przez całą pracę rozważane krzywe są krzywymi kawałkami $C^\infty$, gdzie kolejne
-$C^\infty$ fragmenty krzywych nigdy nie tworzą kąta $0stopni$ (tutaj formalniej). Będą one dalej nazywane
-po prostu krzywymi. \\
+motywacjach skąd wzięły się przedstawione problemy. Mniej więcej między drugim a trzecim rozdziałem
+całość nabiera formalizmu. Przez całą pracę rozważane krzywe są krzywymi sparamtryzowanymi długością,
+ kawałkami $C^\infty$, gdzie kolejne $C^\infty$ fragmenty krzywych nigdy nie tworzą kąta $180 stopni$
+ (tutaj formalniej). Będą one dalej nazywane po prostu krzywymi. \\
 łuk - spójny fragment okręgu \\[16pt]
 
 Intuicja podwpowiada, że biorąc koło i tnąc je na skończenie wiele części nie dostaniemy takich, z których
@@ -90,14 +90,15 @@ płaskie. Pojawia się jednak wątpliwość, czy jeśli potnie się koło na mas
 będzie miała odcinki jako krawędzie, które zostaną odwzorowane na brzeg kwadratu, to na przykłąd nie da się
 tak wyciąćtych części, by "upchnąć" gdzieś również obłość okręgu. Przeciwko takiej możliwości świadczy
 następujące rozumawanie. \\
-Kiedy tnę figurę krzywą tak, żeby wprowadzić wklesłość, pojawia mi się również komplementarna do niej obłość.
+Kiedy tnę figurę krzywą tak, żeby wprowadzić wklesłość, pojawia mi się również komplementarna do niej
+wypukłość.
 \rysunek{}
 Można spodziewać się więc, że próbując wyprodukować dla okręgu nadmiarową wklęsłość, starania te zawiodą,
-gdyż za każdym razem powstanie tyle samo obłości. Tylko co to w tym wypadku znaczy "tyle samo"?
+gdyż za każdym razem powstanie tyle samo wypukłości. Tylko co to w tym wypadku znaczy "tyle samo"?
 Nie wiedząc tego dalej pozostaje pewna wątpliwość, czy nie da się pociąć tak, by obłość zniknęła. widać, że
 przy cięciach generujących wklęsłość obłość się pojawia, ale może pojawia się jej "mniej". Powinniśmy w takim
 razie wprowadzić aparat pojęciowy pozwalający nam mierzyć "ilość" wklęsłości i obłości, tak by zobaczyć, czy
-przy jakimkolwiek cięciu, ta się wyprodukować jedno, nie produkujac jednakowej "ilości" drugiego. \\[4pt]
+przy jakimkolwiek cięciu, da się wyprodukować jedno, nie produkujac jednakowej "ilości" drugiego. \\[4pt]
 Przystąpimy do szukania satysfakcjonującej definicji obłości figury, która pozwoli nam rozróżnić
 koło i kwadrat i sformalizować nasze intuicje. Obłość ma oddawać fakt, że coś jest zaokrąglone, więc dla bardziej
 zaokrąglonych obiektów chcielibyśmy, żeby była większa, a dla mniej, żeby była mniejsza. Ponadto o obłości
@@ -119,7 +120,8 @@ Chcemy jednak rozróżniać "wklęsłość" od "wypukłości". Dlatego wybieramy
 
 Granicą promieni okregów z kolejnyh przybliżeń w pojedynczym punkcie jest promień krzywej w danym punkcie.
 Obłość dla łuku wyraża się jako długość przez promień. Skąd obłość krzywej jest całką po krzywej z
-odwrotności promienia ze znakiem. Jest to więc całka po krzywej z jej krzywizny ze znakiem. \\
+odwrotności promienia ze znakiem. Jest to więc całka po krzywej z jej krzywizny ze znakiem (oznaczanej
+tutaj jako $k^\pm$. \\
 % Teraz możemy wyrażać obłość liczbowo w upożadkowanym ciele liczb rzezywistych.
 Zauważmy teraz, że cięcie figury nie zmienia jej obłości. Istotnie każda krzywa cięcia generuje dwie krzywe
 brzegów fragmentów, które są identyczne z wnętrzmi po przeciwnych stronach. \\
@@ -149,13 +151,13 @@ Jak widać problem leży w tym, że obłość wynosi zero, ale dodatnie i ujemne
 o różnych promieniach, które i tak do siebie nie pasują. Dlatego w dokładniejszym podejściu, rozróżniamy
 od fragmentów krzywej o jakim proieniu pochodzi obłość. W tym celu definiujemy miarę, na przedziale
 $\mathbb{R}$, równym $[0, K_\text{MAX}]$, gdzie $K_\text{MAX}$ jest maksymalną krzywizną występującą na
-krzywej. Określamy ją jak następuje:
+krzywej. Dla krzywej sparametryzowanej długością określamy ją jak następuje:
 \begin{equation}
     \mu_O([k_1, k_2]) = \displaystyle\int\limits_{\{t\ :\ k(t) \in [k_1, k_2]\}}
-    k\ \textrm{d}t.
+    k^\pm\ \textrm{d}t.
 \end{equation}
 Tak zdefiniowana miara znowu jest niezmiennicza na cięcia (krzywe są identyczne, różnią się wyłącznie co do
-strony wnętrza) jak i na izometrie i sklejenia. \\
+strony wnętrza) jak i na izometrie zachowujące orientację i sklejenia. \\
 Miara ta ma w każdym punkcie albo gęstość (gdy jakiś promień nie ma żadnego łuku), lub masę, gdy dany promień
  ma swój łuk. \\
  W przypadku pierścienia ZMO wynosi tyle:
@@ -179,15 +181,16 @@ Miara ta ma w każdym punkcie albo gęstość (gdy jakiś promień nie ma żadne
  % Ale najpierw sformalizujmy nieco nasze pojęcia.
 \section{Twierdzenie odwrotne}
 Najpierw sformalizujmy nieco nasze pojęcia. \\
-Zajmujemy się figurami w $\mathbb{R}^2$, których brzegi są skończonymi zbiorami rozłącznych obrazów
+Zajmujemy się zwartymi figurami w $\mathbb{R}^2$, których brzegi są skończonymi zbiorami rozłącznych obrazów
 prostych krzywych
-zamkniętych, kawałkami $C^\infty$, takimi, że, żadne dwa sąsiednie $C^\infty$ kawałki obrazów jednej krzywej
+zamkniętych, kawałkami $C^\infty$, takimi, że, żadne dwa sąsiednie $C^\infty$
+kawałki obrazów jednej krzywej
 nie tworzą ze sobą kąta $180 stopni$. Co to znaczy, że nie tworzą kąta $180 stopni$? O to:
 \rysunek{}
 i wyjaśnienie \\
 
 Wszędzie dalej kiedy będzie użyte słowo figura, będzie to oznaczało właśnie taki podzbiór $\mathbb{R}^2$. \\
-
+Ponadto wszystki krzywe parametryzujemy ich długością.
 \subsubsection{Krzywa z wyróżnioną stroną}
 Krzywa z wyróżnioną stroną będzie to krzywa wraz z wybraną jedną z dwóch klas ciągłych cięć pewnej wybranej
  podwiązki wiązki stycznej $\mathbb{R}^2$ zawieszonej nad tą krzywą. \\
@@ -195,7 +198,7 @@ Dla krzywej $\gamma : [a, b] \to \mathbb{R}^2$ patrzymy się na podwiązkę wią
 $\mathbb{R}^2$ złożoną
 z dowolnych podprzestrzeni dopełniczych do podprzestrzeni rozpinanych przez wektor styczny do krzywej w
 danym punkcie. (na rogach wybieramy tak, by przestrzeń była dopełnicza dla obu wektorów stycznych). \\
-Wybieramy teraz nieznikające cięcia tych wiązek, takich, aby w punktach nieróżniczkowalności
+Wybieramy teraz ciągłe, nieznikające cięcia tych wiązek, takich, aby w punktach nieróżniczkowalności
 wyznacznik macierzy złożonej z wybranego wektora i z wektora stycznego miał taki sam znak dla obydwu
 wektorów stycznych.
 \rysunek{}
@@ -213,16 +216,20 @@ Wybór jednej z klas takich cięć nazywamy wyborem strony krzywej. Ma to oddawa
 Zauważmy, że dla figury rozpatrywanej jako dwuwymiarowa rozmaitość oraz komponenty jej brzegu jedna z tych
 klas jest złożona z wektorów leżacych w wiązce stycznej do tej rozmaitości, a jedna z wektorów do niej
 nienależących. Ponieważ dla każdej komponenty parametryzację możemy wybrać niezależnie, więc da się je wybrać
-tak, by jedna z tych klas odpowiadała dla wszsystkich komponent wnętrzu rozmaitości. Od tej pory będziemy
+tak, by jedna z tych klas odpowiadała dla wszsytkich komponent wnętrzu rozmaitości. Od tej pory będziemy
 zakładali taki właśnie wybór parametryzacji. Co więcej taki, by strona z ujemnym wyznaczniekiem była we
-wnętrzu. (Czyli obiegamy figury przeciwnie do ruchu wskazówek zegra). \\
+wnętrzu.
+% (Czyli obiegamy figury przeciwnie do ruchu wskazówek zegra).
+\\
 
 Od tej pory o wszystkich krzywych zakładamy, że mają wyróżnioną stronę.
+Krzywiznę ze znakiem $k^\pm$ określamy tak, że jeśli para: wektor styczny, wektor drugiej pochodnej ma ten
+sam znak co wybrana klasa, to $k^\pm = k$, w przeciwnym wypadku $k^\pm = -k$.
 \subsection{Równoważność z problemem na brzegach}
 Najpierw dowiedziemy, że zagadnienie równoważności takich figur przez cięcia jest równoważne równoważności
 przez cięcia ich brzegów w następujacym sensie: \\
 Powiemy, że dwie krzywe są równoważne przez cięcia, jeżeli obraz jednej z nich można pociąć i za pomocą
-izometrii przekształcić na obraz drugiej (zachowując wyróżnioną stronę), przy czym dopuszczamy cięcia pustej
+izometrii zachowujących orientację przekształcić na obraz drugiej (zachowując wyróżnioną stronę), przy czym dopuszczamy cięcia pustej
 przestrzeni na dwie
 odpowiadające sobie krzywe oraz sklejanie takich krzywych:
 \rysunek{słynne rysunki rozcinania pustej przestrzeni oraz klejenia dwóch odpowiadających krzywych
@@ -230,7 +237,8 @@ dopiski - kreacja, anihilacja}
 W jedną stronę: \\
 jeśli da się przerzucić brzegi na siebie, a figury mają równe pola, to da się również figury. \\
 Weźmy dwie figury $A$ oraz $B$ o równych polach, takie, że brzegi są równoważne przez cięcia. Niech cięcie
-to będzie realizowane poprzez podział brzegu $A$ i przekształcenie jego fragmentów przez izometrie oraz,
+to będzie realizowane poprzez podział brzegu $A$ i przekształcenie jego fragmentów przez przesunięcia
+i obroty oraz,
 jeśli konieczny, podział "pustej przestrzeni" na krzywe i anihilację pasujących krzywych tak jak opisane
 wyżej. Niech ta operacja świadcząca o równoważności dwóch brzegóœ przez cięcia nazywa się $\phi$ \\
 Skonstruujemy teraz redukcję problemu podziału tych figur do problemu podziału wielokątów, który, jak wiadomo
@@ -263,7 +271,8 @@ Pozostaje "obsłużyć" fragmety brzegu $B$ pochadzące z kreacji krzywych z prz
 Potrzebny będzie następujący lemat:
 \begin{lemma}\label{lemat o dzieleniu}
     Dla dowolnej krzywej $\gamma : [a, b] \to \mathbb{R}$ takiej jak tu przyjmujemy i dowolnego okręgu
-    $\mathcal{O}$ zawartego w $\mathbb{R}^2$ da się znaleźć taki podział $\gamma$, by poprzez izometrie
+    $\mathcal{O}$ zawartego w $\mathbb{R}^2$ da się znaleźć taki podział $\gamma$, by poprzez
+    przesunięcia i obroty
     dało się go odwzorować we wnętrze $\mathcal{O}$ tak, że obrazy fragmentów są parami rozłączne.
 \end{lemma}
 \begin{proof}
@@ -333,17 +342,190 @@ Znakowana miara obłości nie potrafi jednak rozróżnić wszystkich nieprzystaj
 krzywych. Skonstruujemy tego przykład. Najpierw jednak przeprowadzimy analizę czym jest
 wprowadzona tutaj znakowana miara obłości i jak ma się do krzywizny krzywej.
 \subsubsection{Jak wygląda znakowana miara obłości}
+Rozpatrzmy krzywą o ściśle monotonicznej krzywiźnie.
+Dla takich krzywych znak znakowanej krzywizny jest stały. Rozpatrzmy najpierw przypadek, gdzie $k^\pm = k$.
+\\
+ Niech $k(t)$ będzie funkcją krzywizny od czasu jakim
+jest
+sparametryzowana. Ze ścisłej monotoniczności istnieje funkcja odwrotna $t(k) : [k_\text{MIN}, k_\text{MAX}]
+\to \mathbb{R}$, która mówi w jakiej chwili czasu uzyskana była dana wartość krzywizny. \\
+Wyrazimy teraz znakowaną miarę obłości takiej krzywej poprzez jej krzywiznę oraz na odwrót - jej krzywiznę
+poprzez jej znakowaną miarę obłości. \\
+\begin{lemma}
+    Dla krzywej o ściśle rosnącej krzywiźnie jej ZMO ma gęstość.
+\end{lemma}
+\begin{proof}
+    Z definicji znakowanej miary obłości, dla dowolnego przedziału $[k_1, k_2]$ jest ona równa:
+    \begin{equation}
+        \mu_K([k_1, k_2]) = \displaystyle\int\limits_{t(k_1)}^{t(k_2)}k(t)\ \text{d}t
+    \end{equation}
+    Co przez zamianę zmiennych jest równe:
+    \begin{equation}
+        \displaystyle\int\limits_{t(k_1)}^{t(k_2)}k(t)\ \text{d}t =
+        \displaystyle\int\limits_{k_1}^{k_2}\frac{k}{k'(t(k))}\ \text{d}k
+    \end{equation}
+    $\varrho_K(k) = \frac{k}{k'(t(k))}$ jest szukaną gęstością miary $\mu_K$.
+\end{proof}
+W ten sposób dla takiej klasy krzywych wyraziliśmy gęstość ich ZMO poprzez ich krzywiznę. Dla krzywych bez
+łuków $\mu_K$ rownież ma gęstość, jest ona wtedy sumą gęstości jej składowych o ściśle monotonicznej
+krzywiźnie.
+Jest tak ponieważ definiujemy tę miarę poprzez całkę, która jest operatorem liniowym. \\
+\smalltodoII{określić jakie trzeba przyjąć warunki początkowe}
+Możemy wyrazić krzywiznę krzywej o ściśle monotonicznej krzywiźnie na podstawie jej ZMO rozwiązując równanie
+różniczkowe:
+\begin{equation}
+    \varrho_K(t) = \frac{k(t)}{k'(t)}
+\end{equation}
+Jego rozwiązaniem jest:
+\begin{equation}
+    k(t) = k_0e^{\int_{t(k_0)}^{t}\frac{1}{\varrho_K(w)}\text{d}w}
+\end{equation}
+Gdzie $k_0$ to odpowiednio najmniejsza bądź największa krzywizna. \\
+Dla przypadku, gdzie $k^\pm = -k$ otrzymane zależności to:
+\begin{align}
+    \varrho_K(k) &= -\frac{k}{k'(t(k))}\ \
+    % \varrho_K(t) &= -\frac{k(t)}{k'(t)}\
+    \textrm{oraz} \\
+    k(t) &= k_0e^{\int_{t(k_0)}^{t}-\frac{1}{\varrho_K(w)}\text{d}w}.
+\end{align}
+Jako, że w obydwu przypadkach znakowana krzywizna ma stały znak, możemy odtworzyć również wyróżnioną stronę
+krzywej - w pierwszym przypadku jest to strona której reprezentantem są wektory II pochodnej. W drugim
+przpadku - wektory do nich przeciwne. \\
 
+\subsection{No i co z tego?}
+Krzywa będąca konkatenają dwóch krzywych o ściśle rosnącej krzywiźnie o mierze obłości:
+\rysunek{}
+każda. Ma tą samą miarę obłości co krzywa o ściśle rosnącej krzywiźnie i mierze obłości:
+\rysunek{}
+Nie są one jednak równoważne przez cięcia. Dla dowolnej ustalonej wartości krzywizny mają one bowiem różne
+wartości pochodnej tej krzywizny. \smalltodoII{napisać dokładniej czemu}.
+By potrafić odróżnić od siebie istotnie różne krzywe potrzebujemy niezmiennika zawierającego w sobie
+informacje o parametryzacji. Należałoby zawrzeć jakoś informacje jak krzywa rozkłąda się na krzywe o ściśle
+monotonicznej krzywiźnie, które już są wyznaczone jednoznacznie (z dokładnością do przesunięć i
+obrotów) przez ich ZMO.
+Wtedy znalibyśmy rodzinę krzywych z dokładnością do ich cięć i przesunięć oraz obrotów.
+W następnym rozdziale przedstawimy niezmiennik, który faktycznie jest zachowywany przy cięciach
+przesunięciach oraz obrotach i
+ sklejeniach oraz jest różny dla krzywych (a stąd dla figur) które równoważne nie są.
 
 \section{Wielka grupa abelowa}
+Niech $\mathcal{A}$ będzie rodziną wszytkich
+prostych krzywych
+zamkniętych, kawałkami $C^\infty$, takimi, że, żadne dwa sąsiednie $C^\infty$ kawałki obrazów jednej krzywej
+nie tworzą ze sobą kąta $180 stopni$, sparametryzowanych długością z wyróżnioną stroną
+(zapisywaną jako $\mathcal{S}(\gamma) = 1$ bądź $\mathcal{S}(\gamma)=-1$. \\
+Rozepnijmy wolna grupę abelową na $\mathcal{A}$. \\
+Określmy teraz relacje w tej grupie: \\
+-kreacji/anihilacji \\
+-cięcia/klejenia \\
+-izometrii zachowujących orientację \\
 
+\subsubsection{Kreacja/anihilacja}
+Dla $\gamma_1 : [a, b] \to \mathbb{R}^2, \gamma_2 : [c, d] \to \mathbb{R}^2$
+\begin{gather}
+    \Big( \gamma_1[[a,b]]=\gamma_2[[c,d]] \\\land\\
+    \big( (\gamma_1(a) = \gamma_2(c) \land \mathcal{S}(\gamma_1)=\mathcal{S}(\gamma_2)\big) \\\lor \\
+    \big(\gamma_1(a) = \gamma_2(d) \land \mathcal{S}(\gamma_1)\neq\mathcal{S}(\gamma_2)) \big) \Big)\\
+     \implies \gamma_1 + \gamma_2 = 0
+\end{gather}
+\subsubsection{Cięcia/klejenie}
+Dla $\gamma_0 : [a_1, a_n] \to \mathbb{R}^2, \gamma_1 : [a_1, a_2] \to \mathbb{R}^2, \ldots, \gamma_n :
+[a_{n-1}, a_n] \to \mathbb{R}^2$, takich że $a_1 < a_2 < \ldots < a_{n-1} < a_n$
+\begin{gather}
+    \Big(
+    (\forall t \in [a_i, a_{i+1}])(\gamma_0(t)=\gamma_i(t)) \land (\forall i)\mathcal{S}(\gamma_0) =
+    \mathcal{S}(\gamma_i)
+    \Big) \\
+    \implies \gamma_0 - \gamma_1 - \ldots -\gamma_n = 0
+\end{gather}
+\subsubsection{Izometrie zachowujące orientacje}
+Dla $\gamma_1 : [a, b] \to \mathbb{R}^2, \gamma_2 : [c, d] \to \mathbb{R}^2$
+\begin{gather}
+    ( k^\pm(\gamma_1) \equiv k^\pm(\gamma_2)
+    \land
+    \mathcal{S}(\gamma_1)=\mathcal{S}(\gamma_2))
+    \implies \gamma_1 - \gamma_2 = 0
+\end{gather}
+Odpowiada to odwzorowaniom przez izometrie zachowujące orientację $\mathbb{R}^2$.
+\begin{gather}
+    (\exists\Lambda_{-\text{izometria}}\ \gamma_1 \equiv \Lambda\circ\gamma_2
+    \land \mathcal{S}(\gamma_1)=\mathcal{S}(\gamma_2))\implies \gamma_1 - \gamma_2 = 0
+\end{gather}
+ponieważ funkcja znakowanej krzywizny określa jednoznacznie krzywą (bez wyróżnionej strony)
+z dokładnością do jej początku i wektora stycznego w początku.
+\smalltodoII{napisać równanie różniczkowe}
+Druga pochdna równa się wektor prostopadły do pierwszej dodatnio zorintowany razy znakowana krzywizna. \\
+\begin{equation}
+    (\gamma''_x, \gamma''_y)(t) = k^\pm(t)(-\gamma'_y, \gamma'_x)(t)
+\end{equation}
+\smalltodoII{napisać coś o rozwiązaniu tego równania}
+
+Zauważmy, że trzecia relacja utożsamia również krzywe o tym samym obrazie, a różnej parametryzacji ze
+względu na przedział którym są sparametryzowane.
 \section{Równoważność elementu w wielkiej grupie abelowej z klasą figur równoważnych ze sobą przez cięcia}
-
+Widać \\
+W jedną stronę - weźmy element z WGA, pokażemy, że odpowiadamu dokładnie jedna klasa równoważności krzywych.
+\\
+Jeśli odpowiadałyby dwie, to biorę po reprezentancie każdej z nich i patrzę na ich elementy w niewydzielonej
+grupie, są tym samym w wydzielonej, więc te relacje jakoś je zwijają. \\
+To generuje cięcia. \\
+% To senioeoofaja cięcoa. {onadfoeofe możena z zauważeć , zę w pownem momecicie zacząłem pisać całkowicie verz
+% patrzenia na klawoateurę
+% po odzie rto znacznoe lieoaj nież się zspodzieawałem. zSz czełdó lnei ż e staeałen się apasiasć wiraen sirwas
+%  sdioasgsi c szir czo0od aifa naiej fpsijiakdf/ nke.
+Jeśli dwie figury są w tej samej klasie, to są te transformacje, które o tym świadczą, przenossą się one na
+grupę. \\
 \section{Dyskusja, że to niewiele daje}
-
+Niezmiennik jakim jest element w WGA faktycznie daje charakteryzaję. Jednak jego wyznaczenie (bądź w ogóle
+opisanie) nie wydaje się łatwiesze niż rozstrzygnięcie problemu dla danych figur bez tego aparatu
+pojęciowego. Wiedza o możliwości przedstawienia tego problemu w postaci WGA nie dała mi żadnej odpowiedzi
+na żadne pytanie postaci "opisuję jakoś dwie figury, chcę rozstrzygnąć, czy są równoważne przez cięcia",
+którego nie potrafiłbym rozstrzygnąć w iinny sposób. Opis ten daje jednak inne rzeczy.\\
+Odzwierciedliliśmy bowiem problem w strukturę grupową. Zrobiliśmy to również w taki sposób, że każdej klasie
+figur równoważnych przez cięcia odpowiada jeden element w grupie abelowej oraz liczba rzeczywista (pole)
+oraz każdemu elementowi z grupy wraz z liczbą z zakresu $(0, \infty)$ (możliwe pola, bo tnąc zawsze można
+zejść dowaolnie blisko zera "redukując kąt zataczany przez krzywe i zbliżając powstałe krawędzie", a
+kreując krzywe można uzyskać dla wybranej klasy dowolnie duże pole).
+\rysunek{redukcja krzywizny}
+odpowiada jedna klasa figur równoważnych przez podział. \\
+Załóżmy teraz, ze chcemy okreslić pewien niezmiennik, prostszy w wyliczeniu, ale taki, że jego możliwe wyniki
+nadal będą w bijekcji z klasami podziału. Załóżmy ponadto, że przeciwdziedzina tego niezmiennika będzie miała
+strukturę grupową. Jest to dość naturalne założenie, pierwsze dwa naturalne niezmienniki jakie wprowadziliśmy
+, mianowicie obłość i znakowana miara obłości, miały tę strukturę, a niezmienniki były homomorfizmami,
+gdzie po jednej stronie działaniem było wzięcie na raz dwóch krzywych (albo, można myśleć ich konkatenacja),
+a po drugiej stronie - suma ich niezmienników. \\
+Wydaje się, że jeśli niezmiennik wyrażony w czymś o strukturze grupowej miałby się zachowywać "przyzwoicie"
+powinien mieć tę własność. Mając jednak naszą WGA widzimy, że każdy taki niezmiennik pozwalający na
+rozróznianie dwóch dowolnych klas oraz nie mający będzie miał zanurzoną w sobie WGA, w tym sensie będzie
+nieprostszy. \\
+Oczywiście nie wykluczam, że nie spostrzegłem jaki metod rozróżniania klas figur przy użyciu innego typu
+niezmienników bądź bez określania niezmienników wgl. Może też istnieje efektywna metoda określania
+jednakowości elementóœ w WGA. Jednak na ten moment żadne z powyższych nie zostało przeze mnie znalezione.
+% pewnego zakresu charakterystycznego dla tego elementu (możliwe pola)
 \section{a co, jeśli, krzywe są zamknięte i (nie kawałkami!) głądkie?}
 
+\section{Jakaś mało odkrywcza uwaga o topologii}
+Na zbiorze figur takich jak omawiane w tej pracy, branych z dokładnością do przesunięć i obrotów na
+płaszczyźnie można określić odległość między nimi jako infimum pola sumy rozłącznej brane po wszystkich
+reprezentantach klas (czyli po wszystkich obrazach izometrii na płaszczyźnie). \\
+Czy to jest rzeczywiście matryka? \\
+Tak, jest. \\
+\begin{proof}
+    1. $d(f,g) = 0 \iff f \cong g$. Implikacja w lewą stronę jest oczywista. Implikacja w prawą stronę,
+    wynika z tego, że ze zwartości jeśli punkt należy do sumy rozłącznej, to należy wraz ze swoim otoczeniem,
+     więc pole sumy rozłącznej jest >0. (Gdyby nie należał wraz z żdnym otoczeniem, to dowolnie blisko
+     mógłbym podejść punktami z drugiej figury i z domkniętości tenże punkt też by należał). \\
+     2. $d(f,g ) = d(g,f)$. Jest tak, bo różnicasymetryczna jest symetryczna. \\
+     3. warunek trójkąta. Jest tak, bo odległość zdefiniowaliśmy \\
 
+\end{proof}
+Można teraz zauważyć że w tak zdefiniowanej topologii na figurach każda klasa wyznaczona przez jeden z
+elementów WGA (czyli klasa równoważności przez cięcia z zaniedbaniem zachowywania pola) jest zbiorem gęstym.
+\\
+równoważności przez cięci
+jest zbiorem gęstym. \\
+\begin{proof}
 
+\end{proof}
 
 \end{document}
