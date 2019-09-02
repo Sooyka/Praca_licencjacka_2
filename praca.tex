@@ -504,7 +504,7 @@ jednakowości elementóœ w WGA. Jednak na ten moment żadne z powyższych nie z
 % pewnego zakresu charakterystycznego dla tego elementu (możliwe pola)
 \section{a co, jeśli, krzywe są zamknięte i (nie kawałkami!) głądkie?}
 
-\section{Jakaś mało odkrywcza uwaga o topologii}
+\section{Uwaga o topologii}
 Na zbiorze figur takich jak omawiane w tej pracy, branych z dokładnością do przesunięć i obrotów na
 płaszczyźnie można określić odległość między nimi jako infimum pola sumy rozłącznej brane po wszystkich
 reprezentantach klas (czyli po wszystkich obrazach izometrii na płaszczyźnie). \\
@@ -516,16 +516,41 @@ Tak, jest. \\
      więc pole sumy rozłącznej jest >0. (Gdyby nie należał wraz z żdnym otoczeniem, to dowolnie blisko
      mógłbym podejść punktami z drugiej figury i z domkniętości tenże punkt też by należał). \\
      2. $d(f,g ) = d(g,f)$. Jest tak, bo różnicasymetryczna jest symetryczna. \\
-     3. warunek trójkąta. Jest tak, bo odległość zdefiniowaliśmy \\
+     3. warunek trójkąta. Jest tak, bo odległość zdefiniowaliśmy przez infimum. (Serio wyszło
+     \smalltodoII{napisać to}. \\
 
 \end{proof}
+Zauważmy, ż jeśli $\mathcal{P}(f)$ to pole figury $f$, to
+\begin{equation}
+    |\mathcal{P}(f) - \mathcal{P}(g)| \leq d(f, g)
+\end{equation}
+Wynika stąd, że dla dowolnej liczby rzeczywistej $r$, zbiór figur o polu $r$ jest zbiorem domkniętym.
+(Nazwijmy ten zbiór $R$. Weźmy punkt $s$ spoza tego zbioru, niech ma on pole $m$.
+Stąd $s$ jest w odległości co najmniej $|m-r|$ od każdego punktu z $R$. \\
+Otoczenie będące kulą wokół $s$ o promieniu ostro mniejszym niż $|m - r|$ zawiera się więc w dopełnieniu $R$.
+ Stąd dopełnienie $R$ jest otwarte, stąd $R$ jest domknięty. $_\square$)
+\\
+% Można zauważyć że zbiór figur o równym polu jest
+%może jakiś ilozyn sklalarny
 Można teraz zauważyć że w tak zdefiniowanej topologii na figurach każda klasa wyznaczona przez jeden z
 elementów WGA (czyli klasa równoważności przez cięcia z zaniedbaniem zachowywania pola) jest zbiorem gęstym.
 \\
-równoważności przez cięci
-jest zbiorem gęstym. \\
-\begin{proof}
-
-\end{proof}
-
+% Dalej, można zawuważyć, że dla dowolnej takiej klasy, wystarczy ograniczyć się do figur, gdzie końce
+% $C^\infty$ fragmentów leżą w punktach wymiernych.
+Można też zauważyć, że skoro każdą figurę jestem w stanie dowolnie przybliżyć wielokątami o wierzchołkach
+w punktach wymiernych, to powstała przestrzeń jest przestrzenią ośrodkową.
+\\
+% Dlaje można zauważyć, że każdy ciąg cauchyego w tej przestrzeni ma granicę. Stąd powstała przestrzeń figur
+% jest przestrzenią polską. \\
+Przestrzeń ta nie jest jednak zupełna.
+% Każda klasa równoważności przez cięcia (z zachowaniem pola) jest za to zbiorem gęstym w zbiorze domkniętym
+% (figur o danym polu). \\
+% % Dlaje można zauważyć, że każdy ciąg cauchyego w tej przestrzeni ma granicę. Stąd powstała przestrzeń figur
+% % jest przestrzenią polską. \\
+% % Teraz przystąpimy do wyznaczenia klasy zlożoności klasy podziału figury przez cięcia. \\
+%
+% \begin{proof}
+%
+% \end{proof}
+%
 \end{document}
