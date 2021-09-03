@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{Grabowski}
+{\L}ukasz Grabowski, Andr{\'a}s M{\'a}th{\'e}, and Oleg Pikhurko.
+\newblock Measurable circle squaring.
+\newblock {\em Annals of Mathematics}, 185(2):671--710, March 2017.
+
+\bibitem{[DHK]}
+J.~Karush L.~Dubins, M.W.~Hirsch.
+\newblock Scissor congruence.
+\newblock {\em Israel J. Math.}, 1:239–247, 1963.
+
+\bibitem{Laczkovich1990}
+Miklós Laczkovich.
+\newblock Equidecomposability and discrepancy; a solution of tarski's
+  circle-squaring problem.
+\newblock {\em Journal für die reine und angewandte Mathematik}, 404:77--117,
+  1990.
+
+\bibitem{spivak}
+Michael Spivak.
+\newblock {\em A Comprehensive Introduction to Differential Geometry, Vol. 2,
+  3rd Edition}.
+\newblock Publish or Perish, 3rd edition, 1999.
+
+\bibitem{WBG}
+MathWorld-A Wolfram Web~Resource. Weisstein, Eric~W.
+\newblock Wallace-bolyai-gerwien theorem.
+\newblock
+  \url{https://mathworld.wolfram.com/Wallace-Bolyai-GerwienTheorem.html}.
+
+\end{thebibliography}

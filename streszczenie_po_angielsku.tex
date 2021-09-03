@@ -1,0 +1,142 @@
+\documentclass[a4paper, 12pt, twosided]{article}
+\synctex=1
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage[polish, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{empheq}
+\usepackage{xcolor}
+\usepackage[pdftex,
+            pdfauthor={Bartosz Sójka},
+            pdftitle={Równoważność przez cięcia w przestrzeni dwuwymiarowej},
+        %    pdfsubject={Równoważność przez cięcia w przestrzeni dwuwymiarowej}
+            ]{hyperref}
+\usepackage{siunitx}
+\usepackage{geometry}
+%\setlength\parindent{0pt}
+
+%\topmargin = -1in
+
+\geometry{a4paper, 
+twoside,
+%asymmetric,
+top = 35mm,
+bottom = 45mm,
+inner = 35mm,
+outer = 30mm}
+
+%\linespread{1.24}
+
+%top = 25mm,
+%bottom = 30mm,
+%inner = 30mm,
+%outer = 25mm
+
+\newtheorem{observation}{Observation}[subsection]
+\newtheorem{definition}[observation]{Definicja}
+\newtheorem{theorem}[observation]{Twierdzenie}
+\newtheorem{lemma}[observation]{Lemat}
+
+\newcommand{\todo}[1]{\hfill \break \textbf{\Huge \textcolor{violet}{TO DO: #1} \hfill \break}
+\normalsize}
+\newcommand{\content}[1]{\hfill \break \textbf{\large \textcolor{violet}{#1} \hfill \break}
+\normalsize}
+\newcommand{\smalltodo}[1]{\textbf{\ \textcolor{violet}{To do}}}
+\newcommand{\smalltodoII}[1]{\hfill \break \textbf{\ \textcolor{violet}{To do: #1}}\hfill \break}
+\newcommand{\onedotsn}[1]{{#1}_1, \dots, {#1}_n}
+\newcommand{\ndotsm}[3]{{#1}_{#2}, \dots, {#1}_{#3}}
+\newcommand{\rysunek}[1]{\hfill \break\\[16pt] \Huge \textbf{\textcolor{violet}{Brakujący rysunek 
+\normalsize
+#1}} \hfill
+\break \\[16pt] \normalsize}
+\newcommand{\colvect}[2]{\begin{pmatrix}#1 \\ #2\end{pmatrix}}
+
+\title{Równoważność przez cięcia w przestrzeni dwuwymiarowej}
+\author{Bartosz Sójka}
+%\date{}
+
+\begin{document}
+\begin{abstract}
+    W roku 1990 
+    %węgierski matematyk 
+    Miklós Laczkovich rozwiązał problem kwadratury koła Tarskiego -- 
+    udowodnił
+     on, że koło da się podzielić na skończoną liczbę części, z których można ułożyć kwadrat 
+     \cite{Laczkovich1990}. Wynik ten został wzmocniony w pracy autorstwa 
+     Łukasza Grabowskiego, Andrása Máthé'a i 
+     Olega Pikhurko, w której pokazali oni, że części na które dzielone są figury mogą być zbiorami 
+      Baira
+     mierzalnymi w sensie Lebesgue'a~\cite{Grabowski}. 
+     %, a przemieszczać wystarczy je poprzez 
+     %translacje
+     %~\cite{Grabowski}. 
+%     \footnote{M. Laczkovich. Equidecomposability and discrepancy; a solution of
+%Tarski’s circle-squaring problem. (404):77–117, 1990.}
+     %Twierdzenie to może 
+     Twierdzenia te mogą 
+     wydawać się nieintuicyjne i istotnie, na przykład części na które zostało podzielone 
+      koło w 
+     %dowodzie 
+     dowodach 
+     były zbiorami 
+     %niemierzalnymi
+     niehomeomorficznymi z $D^2$,
+      a 
+     %sam dowód 
+     same dowody
+     %był
+     były 
+     %niekonstruktywny. 
+     niekostruktywne.
+     Co więcej, twierdzenia te nie 
+     %jest ono
+     są 
+     prawdziwe, w przypadku
+      gdy
+     ograniczymy się do podziałów koła na zbiory, których brzegi są prostowalnymi krzywymi Jordana, 
+     co pokazali Lester Dubins, Morris W. Hirsch i Jack Karush w~\cite{[DHK]}. 
+      Punktem 
+     wyjścia
+     pracy jest przypadek powyższego zagadnienia, gdzie brzegi są krzywymi Jordana kawałkami 
+     $C^\infty$.
+     Można traktować je jako dobry model dla fizycznie realizowalnych cięć. 
+     Użyte argumenty oraz sposób rozumowania są w swojej naturze podobne do 
+     %przypominają 
+     tych z~\cite{[DHK]}. Dalej będzie rozwinięta
+      i
+     omówiona teoria klasyfikacji figur w przestrzeni dwuwymiarowej ze względu na ich równoważność 
+     przez
+     cięcia.
+ \end{abstract}
+\begin{abstract}
+In the year 1990 Miklós Laczkovich solved Tarski's problem of squaring the circle -- he proved, that 
+a circle can be 
+%decomposed 
+divided into finitely many pieces from which one can compose a square\cite{Laczkovich1990}. 
+This result was strengten in the paper written by Łukasz Grabowski, András Máthé and  
+     Oleg Pikhurko where they showed that the pieces into which figures are divided can be 
+     Bair sets, mesurable in the Lebesgue sense~\cite{Grabowski}. These theorems can seem 
+     unintuitive and indeed, for example, the pieces in which the circle was divided in the proofs 
+     were sets that were non-homeomorphic with $D^2$ and the proofs themselfs was unconstructive 
+     %ones. 
+     . What is more, these theorems are not true in the case,  where we restrict ourselfs to 
+     divisions of the circle into pieces which boundaries are Jordan curves what was shown by Lester 
+     Dubins, Morris W. Hirsch and Jack Karush in~\cite{[DHK]}. The starting point of the paper is 
+     the case of above problem, where boundries are Jordan curves, piecewise $C^\infty$. They can be 
+     treated as a good model for physically-realisable cuts. Argumets used and reasoning are 
+     simmilar 
+     in nature to those in~\cite{[DHK]}. Next there will be futher developed and discussed the 
+     theory of classification of figures in two dimentional space with respect to their equivalence 
+     by cutting.
+     
+\end{abstract}
+Scissor-congruence in a two dimentional space
+\nocite{*}
+\bibliography{praca_bibliografia}{}
+\bibliographystyle{plain}
+\end{document}
